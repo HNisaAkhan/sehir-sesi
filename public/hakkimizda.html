@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - ŞehirSesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { padding-top: 70px; }
+        .navbar-nav .nav-link { margin-right: 15px; }
+    </style>
+</head>
+<body class="hakkimizda-page">
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Şehrimizin Sesi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="canli-takip.html">Canlı Takip</a></li>
+        <li class="nav-item"><a class="nav-link" href="yeni-ihbar.html">Yeni İhbar</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Hakkımızda</a></li>
+      </ul>
+      <!-- Navbar sağında en sağda buton -->
+      <a class="btn auth-btn ms-3" data-bs-toggle="modal" data-bs-target="#authModal">
+        Giriş Yap / Kayıt Ol
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hakkımızda İçerik -->
+<div class="container hakkimizda-content mt-4">
+    <h2>Hakkımızda</h2>
+    <p>Şehrimizin Sesi, yaşadığımız şehirde olup biten gelişmeleri <strong>doğru, hızlı ve tarafsız</strong> bir şekilde kamuoyuna aktarmayı amaçlayan yerel bir haber platformudur.  
+    Amacımız; vatandaşların sesini duyurabileceği, gündemin şeffaf bir şekilde takip edilebildiği güvenilir bir dijital haber kaynağı olmaktır.</p>
+
+    <p>Platformumuzda yalnızca haber paylaşımı yapılmakla kalmaz; aynı zamanda vatandaşların doğrudan katkı sağlayabildiği bir <strong>ihbar sistemi</strong> de bulunmaktadır.  
+    Yaşanan olaylar, sorunlar veya kamuoyunu ilgilendiren gelişmeler, okuyucularımız tarafından Yeni İhbar bölümü üzerinden tarafımıza iletilebilmektedir.</p>
+
+    <p>İhbar sırasında paylaşılan iletişim bilgileri, yalnızca haberin doğruluğunu ve detaylarını teyit etmek amacıyla kullanılmaktadır.  
+    Gerekli durumlarda, ihbarı yapan vatandaşlarımızla telefon yoluyla iletişime geçilerek olay hakkında daha kapsamlı bilgi alınır.  
+    Bu süreçte <strong>gizlilik ve kişisel verilerin korunması</strong> ilkesine büyük önem verilmektedir.</p>
+
+    <p>Şehrimizin Sesi, <strong>etik gazetecilik anlayışıyla</strong> hareket eder; doğrulanmamış, yanıltıcı veya kamuoyunu yanlış yönlendirecek içeriklere yer vermez.  
+    Yayınlanan her içerik, editöryal süzgeçten geçirilerek kamu yararı gözetilerek paylaşılır.  
+    Şehrin nabzını tutan, vatandaşın sesine kulak veren ve yerel gündemi görünür kılan bir platform olma hedefiyle çalışmalarımıza kararlılıkla devam ediyoruz.</p>
+
+    <h4>Özelliklerimiz</h4>
+    <ul>
+        <li>Yeni ihbar oluşturma ve takip etme</li>
+        <li>Canlı ihbar takibi</li>
+        <li>Yetkililerle doğrudan iletişim</li>
+        <li>Şeffaf ve güvenilir raporlama</li>
+    </ul>
+</div>
+
+<section class="container hakkimizda-content my-5">
+    <h2 class="mb-4 text-center">Sık Sorulan Sorular</h2>
+    <div class="accordion" id="sssAccordion">
+    </div>
+
+    <!-- 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sss1">
+          Şehrimizin Sesi nedir?
+        </button>
+      </h2>
+      <div id="sss1" class="accordion-collapse collapse show" data-bs-parent="#sssAccordion">
+        <div class="accordion-body">
+          Şehrimizin Sesi, şehirde yaşanan güncel gelişmeleri ve vatandaşlardan gelen
+          ihbarları tarafsız ve güvenilir bir şekilde kamuoyuna aktaran yerel bir
+          haber platformudur.
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sss2">
+          İhbar nasıl yapabilirim?
+        </button>
+      </h2>
+      <div id="sss2" class="accordion-collapse collapse" data-bs-parent="#sssAccordion">
+        <div class="accordion-body">
+          Web sitemizde yer alan <strong>Yeni İhbar</strong> bölümü üzerinden ihbar
+          formunu doldurarak bize kolayca ulaşabilirsiniz.
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sss3">
+          İhbar yaptıktan sonra benimle iletişime geçiliyor mu?
+        </button>
+      </h2>
+      <div id="sss3" class="accordion-collapse collapse" data-bs-parent="#sssAccordion">
+        <div class="accordion-body">
+          Gerekli görülen durumlarda, ihbar sırasında paylaşılan telefon numarası
+          üzerinden sizinle iletişime geçilerek daha detaylı bilgi alınır.
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sss4">
+          Kişisel bilgilerim güvende mi?
+        </button>
+      </h2>
+      <div id="sss4" class="accordion-collapse collapse" data-bs-parent="#sssAccordion">
+        <div class="accordion-body">
+          Paylaşılan tüm kişisel bilgiler gizlilik ilkeleri kapsamında korunur
+          ve üçüncü kişilerle paylaşılmaz.
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sss5">
+          Her ihbar haber olarak yayınlanıyor mu?
+        </button>
+      </h2>
+      <div id="sss5" class="accordion-collapse collapse" data-bs-parent="#sssAccordion">
+        <div class="accordion-body">
+          Hayır. İhbarlar editör ekibimiz tarafından incelenir ve yalnızca doğruluğu
+          teyit edilen, kamu yararı taşıyan içerikler yayınlanır.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sss6">
+          İhbarım size ulaştı fakat hiçbir şey yapılmadı,neden?
+        </button>
+      </h2>
+      <div id="sss6" class="accordion-collapse collapse" data-bs-parent="#sssAccordion">
+        <div class="accordion-body">
+            Tüm ihbarlar değerlendirilir; ancak doğrulanamayan, eksik bilgi içeren veya kamu yararı taşımadığı düşünülen ihbarlar yayınlanmayabilir. Bazı ihbarların değerlendirme süreci zaman alabilir.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="authModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Giriş Yap / Kayıt Ol</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="authTab" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#login" type="button">Giriş Yap</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#register" type="button">Kayıt Ol</button>
+          </li>
+        </ul>
+
+        <div class="tab-content mt-3">
+          <!-- Login -->
+          <div class="tab-pane fade show active" id="login">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">E-posta</label>
+                <input type="email" class="form-control" id="loginEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Şifre</label>
+                <input type="password" class="form-control" id="loginPassword" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+            </form>
+          </div>
+
+          <!-- Register -->
+          <div class="tab-pane fade" id="register">
+            <form id="registerForm">
+              <div class="mb-3">
+                <label for="registerFirstName" class="form-label">Ad</label>
+                <input type="text" class="form-control" id="registerFirstName" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerLastName" class="form-label">Soyad</label>
+                <input type="text" class="form-control" id="registerLastName" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">E-posta</label>
+                <input type="email" class="form-control" id="registerEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label">Şifre</label>
+                <input type="password" class="form-control" id="registerPassword" required>
+              </div>
+              <button type="submit" class="btn btn-success w-100">Kayıt Ol</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const API_URL = "https://sehir-sesi.koyeb.app";
+  // -------------------
+  // Login form submit (backend)
+  document.getElementById('loginForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+
+      try {
+          const res = await fetch(`${API_URL}/login`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, password })
+          });
+          const data = await res.json();
+          if(res.ok){
+              alert(`Giriş başarılı! Hoşgeldiniz ${data.user.name}`);
+              bootstrap.Modal.getInstance(document.getElementById('authModal')).hide();
+              this.reset();
+          } else {
+              alert(data.error);
+          }
+      } catch(err){
+          console.error(err);
+          alert("Giriş sırasında hata oluştu");
+      }
+  });
+
+  // -------------------
+  // Register form submit (backend)
+  document.getElementById('registerForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const firstName = document.getElementById('registerFirstName').value;
+      const lastName = document.getElementById('registerLastName').value;
+      const email = document.getElementById('registerEmail').value;
+      const password = document.getElementById('registerPassword').value;
+
+      try {
+          const res = await fetch(`${API_URL}/register`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ firstName, lastName, email, password })
+          });
+          const data = await res.json();
+          if(res.ok){
+              alert("Kayıt başarılı! Giriş yapabilirsiniz.");
+              bootstrap.Modal.getInstance(document.getElementById('authModal')).hide();
+              this.reset();
+          } else {
+              alert(data.error);
+          }
+      } catch(err){
+          console.error(err);
+          alert("Kayıt sırasında hata oluştu");
+      }
+  });
+</script>
+<footer class="contact-footer mt-4">
+
+
+    <div class="text-center footer-copy text-white">
+      © 2026 Şehrimizin Sesi | Tüm Hakları Saklıdır
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

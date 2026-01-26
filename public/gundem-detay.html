@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gündem Detay | Şehrimizin Sesi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+    <style>
+        .navbar-nav .nav-link {
+            margin-right: 15px;
+        }
+        .hero {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .summary-card {
+            margin-top: 20px;
+        }
+        </style>
+</head>
+<body class="gundem-detay">
+
+
+<div class="content" id="haberContent">
+    <!-- Haber içeriği JS ile gelecek -->
+  </div>
+
+  <script>
+    // Haber verileri
+    const haberler = {
+      1: {
+        title: "Çocuklar İçin Tiyatro Sahnesi Kuruldu",
+        img: "images/cc.png",
+        badge: "Etkinlik",
+        badgeClass: "bg-danger",
+        text: "Şehrimizde çocukların sanata olan ilgisini artırmak, hayal güçlerini geliştirmek ve eğlenceli vakit geçirmelerini sağlamak amacıyla ücretsiz çocuk tiyatrosu etkinliği başlatıldı. Etkinlikte farklı yaş gruplarına uygun oyunlar sahnelenmekte ve çocuklar interaktif olarak tiyatroya dahil edilmektedir.",
+        details: `
+          <h4>Etkinliğin Amacı</h4>
+          <p>Çocukların hayal güçlerini geliştirmek, sosyal becerilerini artırmak ve sanatı sevdirerek kültürel farkındalık yaratmak etkinliğin başlıca hedeflerindendir. Ayrıca çocukların grup halinde çalışmayı öğrenmesi ve sahne deneyimi kazanması sağlanmaktadır.</p>
+          <h4>Etkinlik Detayları</h4>
+          <ul>
+            <li><strong>Tarih:</strong> Her Cumartesi ve Pazar</li>
+            <li><strong>Saat:</strong> 14:00 - 16:00</li>
+            <li><strong>Yer:</strong> Şehir Kültür Merkezi, Büyük Salon</li>
+            <li><strong>Ücret:</strong> Ücretsiz</li>
+          </ul>
+        `
+      },
+      2: {
+        title: "Yeni Park Alanı Açılıyor",
+        img: "images/park2.jpg",
+        badge: "Park",
+        badgeClass: "bg-success",
+        text: "Beşiktaş’ta çocuklar için yeni bir park alanı projesi başlatıldı. Parkta oyun alanları, yeşil alanlar ve yürüyüş yolları bulunacak. Proje, ailelerin çocuklarıyla güvenli ve eğlenceli vakit geçirebileceği bir alan yaratmayı amaçlıyor.",
+        details: `
+          <h4>Park Detayları</h4>
+          <ul>
+            <li><strong>Açılış Tarihi:</strong> 15 Şubat 2026</li>
+            <li><strong>Yer:</strong> Beşiktaş Merkez Mahallesi</li>
+            <li><strong>Özellikler:</strong> Çocuk oyun alanları, yeşil alanlar, yürüyüş yolları</li>
+            <li><strong>Ücret:</strong> Ücretsiz</li>
+          </ul>
+        `
+      },
+      3: {
+        title: "Çevre Kirliliği Alarm Veriyor",
+        img: "images/kirlilik2.jpg",
+        badge: "Çevre",
+        badgeClass: "bg-warning text-dark",
+        text: "Sahil hattında artan atıklar çevre gönüllülerini harekete geçirdi.",
+        details: `
+          <h4>Gönüllü Katılımı</h4>
+          <p>Etkinlikler, her hafta sonu gönüllüler tarafından organize edilmektedir. Katılmak isteyenler Cumartesi-Pazar sahillerimize gelerek direkt katılım gösterebilirler. Bu sayede sahillerimiz daha temiz ve güvenli bir hale getirilmektedir.</p>
+        `
+      }
+    };
+
+    // URL parametresini al
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    const container = document.getElementById('haberContent');
+
+    if (haberler[id]) {
+      const haber = haberler[id];
+      container.innerHTML = `
+        <h1>${haber.title}</h1>
+        <img src="${haber.img}" alt="${haber.title}" class="hero-img">
+        <span class="badge ${haber.badgeClass} mb-3">${haber.badge}</span>
+        <p>${haber.text}</p>
+        ${haber.details}
+        <a href="index.html" class="btn btn-secondary btn-back">Geri Dön</a>
+      `;
+    } else {
+      container.innerHTML = '<p>Haber bulunamadı. <a href="index.html">Anasayfaya dön</a></p>';
+    }
+  </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="contact-footer mt-4">
+
+
+    <div class="text-center footer-copy">
+      © 2026 Şehrimizin Sesi | Tüm Hakları Saklıdır
+    </div>
+  </div>
+</footer>
+</body>
+</html>

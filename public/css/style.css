@@ -1,0 +1,516 @@
+body {
+  background-image: url("../images/cityy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.hero {
+  height: 100vh;              /* EKRANIN TAMAMI */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  max-width: 700px;
+}
+.hero {
+  padding-top: 70px; /* navbar yüksekliği */
+}
+.ihbar-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #dc6235, #b02a37);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(220, 53, 69, 0.35);
+    transition: all 0.3s ease;
+}
+
+.ihbar-cta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(220, 92, 53, 0.5);
+    color: #fff;
+}
+.section-title {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #dc3545;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+#authModal .btn-primary {
+    background-color: #1e293b; /* lacivert / antrasit */
+    border: none;
+    font-weight: 600;
+}
+
+#authModal .btn-primary:hover {
+    background-color: #0f172a;
+}
+#authModal .btn-success {
+    background-color: #dc3545;
+    border: none;
+    font-weight: 600;
+}
+
+#authModal .btn-success:hover {
+    background-color: #b02a37;
+}
+#authModal .nav-tabs .nav-link {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+#authModal .nav-tabs .nav-link.active {
+    color: #dc3545;
+    border-color: transparent transparent #dc3545 transparent;
+    border-width: 3px;
+}
+#authModal .modal-title {
+    font-weight: 700;
+    color: #1e293b;
+}
+#authModal .form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.25);
+}
+.auth-btn {
+    background-color: #1e293b !important;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px 22px;
+    border: none;
+}
+/* =====================
+   FOOTER STİLİ
+===================== */
+/* =====================
+   FOOTER TAM GENİŞLİK
+===================== */
+
+
+/* Footer içeriğini merkezi tut */
+.contact-footer {
+    width: 100%; /* footer tam genişlik */
+    background-color: #1e1e1e;
+    padding: 50px 0 30px 0;
+}
+
+.contact-footer .footer-inner {
+    max-width: 1200px; /* içerik merkezi */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-footer .container {
+    max-width: 1200px; /* içerik genişliği */
+    margin: 0 auto;
+    padding: 0 20px; /* kenarlarda biraz boşluk */
+}
+
+/* Sosyal medya ve diğer stil zaten mevcut */
+.contact-footer h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-footer p {
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.contact-footer i {
+    margin-right: 8px;
+    color: #dc3545; /* kırmızı ton */
+}
+
+/* Sosyal Medya */
+.contact-footer {
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 50px 0 30px 0;
+}
+
+.contact-footer .footer-inner {
+    max-width: 1200px; /* içerik genişliği */
+    margin: 0 auto;
+    padding: 0 20px; /* kenarlarda boşluk */
+}
+
+
+.contact-footer .social-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-footer .social-item i {
+    font-size: 1.2rem;
+}
+
+.contact-footer .social-item:hover {
+    color: #fff;
+}
+
+.contact-footer .social-item:hover i {
+    color: #dc3545;
+}
+
+.contact-footer hr {
+    border-color: #444;
+    margin: 25px 0;
+}
+
+.contact-footer .footer-bottom-links {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-footer .footer-bottom-links span {
+    margin: 0 6px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.contact-footer .footer-bottom-links span:hover {
+    color: #dc3545;
+}
+
+.contact-footer .footer-copy {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-footer .social-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .contact-footer .social-item {
+        flex: 1 1 45%;
+    }
+}
+
+
+/* ------------------ CANLI TAKİP SAYFASI ------------------ */
+/* Sadece Canlı Takip sayfası için */
+.page-canli-takip {
+    padding-top: 70px;
+    min-height: 100vh; /* tüm ekran yüksekliği */
+    background-color: rgba(2, 2, 2, 0.95);
+}
+
+
+.page-canli-takip .navbar-nav .nav-link {
+    margin-right: 15px;
+}
+
+.page-canli-takip .card {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.page-canli-takip .card:hover {
+    transform: translateY(-5px);
+}
+
+.page-canli-takip .auth-btn {
+    background-color: #1e293b !important; 
+    color: #f4f1f1 !important;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px 22px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+
+.page-canli-takip #authModal .btn-primary {
+    background-color: #1e293b;
+    border: none;
+    font-weight: 600;
+}
+
+.page-canli-takip #authModal .btn-primary:hover {
+    background-color: #0f172a;
+}
+
+
+
+
+
+.page-canli-takip #authModal .nav-tabs .nav-link.active {
+    color: #dc3545;
+    border-color: transparent transparent #dc3545 transparent;
+    border-width: 3px;
+}
+
+.page-canli-takip #authModal .modal-title {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+
+
+/* Yeni İhbar formundaki label’lar */
+.new-complaint-page .form-label {
+    color: #353131; /* açık gri, okunaklı */
+}
+
+/* Modal form label’ları ve modal başlık */
+.page-canli-takip #authModal .form-label,
+.page-canli-takip #authModal .modal-title {
+    color: #130f0f; /* açık gri */
+}
+
+
+
+
+/* Hakkımızda sayfasına özel */
+.hakkimizda-content {
+    /* Kırmızı tonlarıyla gradient ve şeffaflık */
+    background: linear-gradient(
+        rgba(206, 194, 195, 0.85), 
+        rgba(157, 149, 150, 0.95)
+    );
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    color: #ffffff; /* yazılar beyaz */
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', sans-serif;
+    backdrop-filter: blur(4px); /* hafif bulanıklık efekti */
+}
+
+.hakkimizda-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #dc3545;
+    padding-bottom: 8px;
+    color: #ffffff;
+}
+
+.hakkimizda-content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 30px;
+    color: #ffffffcc;
+}
+
+.hakkimizda-content p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.hakkimizda-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.hakkimizda-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: #ffffffdd;
+}
+
+.hakkimizda-content ul li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Accordion stili */
+.hakkimizda-content .accordion-button {
+    background-color: rgba(95, 41, 41, 0.15);
+    color: #ffffff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hakkimizda-content .accordion-button:not(.collapsed) {
+    background-color: rgba(95, 9, 9, 0.25);
+    color: #ffffff;
+}
+
+.hakkimizda-content .accordion-body {
+    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+/* =====================
+   YENİ İHBAR SAYFASI ÖZEL STİL
+   (NAVBAR’A HİÇ DOKUNMA)
+===================== */
+.new-complaint-page .form-wrapper {
+    width: 100%;           /* tam genişlik */
+    max-width: none;       /* max-width iptal */
+    margin: 0 auto 50px auto;
+    padding: 35px 20px;    /* isteğe göre az yan boşluk bırakabilirsin */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+/* Form başlıkları */
+/* =====================
+   FULL-WIDTH FOOTER (Yeni İhbar Sayfası)
+===================== */
+#main-copyright-footer {
+    background-color: #1e1e1e; /* Mevcut footer ile uyumlu siyah ton */
+    width: 100vw;              /* Ekranın tam genişliği */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 50px 0 30px 0;    /* Diğer footer ile aynı yükseklik */
+    color: #888;               /* Mevcut footer ile uyumlu gri yazı */
+    font-family: 'Segoe UI', sans-serif; /* Yazı tipi diğer footer ile aynı */
+    font-size: 0.85rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+#main-copyright-footer div {
+    margin: 0;
+    padding: 0;
+}
+/* ============================= */
+/* SADECE GUNDEM-DETAY SAYFASI */
+/* ============================= */
+
+.gundem-detay {
+  background-color: #f4f6f8;
+  padding-top: 80px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ANA HABER KUTUSU */
+.gundem-detay .content {
+  max-width: 760px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+/* BAŞLIK */
+.gundem-detay .content h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+/* ROZET */
+.gundem-detay .content .badge {
+  font-size: 0.72rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* FOTOĞRAF (KÜÇÜK VE DENGELİ) */
+.gundem-detay .hero-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 18px 0 22px 0;
+}
+
+/* PARAGRAFLAR */
+.gundem-detay .content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+/* ALT BAŞLIKLAR */
+.gundem-detay .content h4 {
+  font-size: 1.05rem;
+  margin-top: 26px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* LİSTELER */
+.gundem-detay .content ul {
+  padding-left: 18px;
+}
+
+.gundem-detay .content ul li {
+  font-size: 0.9rem;
+  margin-bottom: 7px;
+  color: #444;
+}
+
+/* GERİ DÖN BUTONU */
+.gundem-detay .btn-back {
+  margin-top: 28px;
+  padding: 7px 18px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+}
+
+/* MOBİL */
+@media (max-width: 576px) {
+  .gundem-detay .content {
+    padding: 20px;
+  }
+
+  .gundem-detay .hero-img {
+    height: 170px;
+  }
+
+  .gundem-detay .content h1 {
+    font-size: 1.35rem;
+  }
+}

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ŞehirSesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+
+</head>
+
+<body class="home-page">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Şehrimizin Sesi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav d-flex gap-3">
+        <li class="nav-item"><a class="nav-link active" href="#">Anasayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="canli-takip.html">Canlı Takip</a></li>
+        <li class="nav-item"><a class="nav-link" href="yeni-ihbar.html">Yeni İhbar</a></li>
+        <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+        <li class="nav-item">
+         <a class="btn auth-btn" data-bs-toggle="modal" data-bs-target="#authModal">
+    Giriş Yap / Kayıt Ol
+</a>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Hero / Anasayfa -->
+ <div class="page-bg">
+
+ </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Şehrimizin Sesi</h1>
+    <p>Şehrimizde olup biten her şey tek bir yerde.
+Vatandaş ihbarları, güncel gelişmeler ve toplumu ilgilendiren konular doğrudan kaynağından burada.</p>
+<p>Gördüğünüz bir sorun mu var?
+Bize bildirin, biz takip edelim.
+Şehrin sesi, birlikte daha güçlü.</p>
+    <a href="yeni-ihbar.html" class="ihbar-cta">
+    <span>🚨 İhbar Bırak</span>
+</a>
+
+</a>
+
+  </div>
+</section>
+
+
+<!-- SON DAKİKA -->
+<div class="container mt-3">
+  <div class="alert alert-danger d-flex align-items-center son-dakika">
+    <strong class="me-3">SON DAKİKA</strong>
+    <marquee behavior="scroll" direction="left">
+      Belediyeden Acil Su Kesintisi Açıklaması | 
+      Ana Caddede Çökme: Trafik Tek Şeritten Veriliyor| 
+      Yeni park alanı çalışması başlatıldı
+    </marquee>
+  </div>
+</div>
+
+
+
+<!-- Şehir Özeti -->
+<div class="container summary-card">
+    <div class="row text-center">
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-3">
+                <h5>Toplam Şikayet</h5>
+                <p id="totalReports" class="fs-3">0</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-3">
+                <h5>Çözülen Sorun</h5>
+                <p id="solvedReports" class="fs-3">0</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-3">
+                <h5>Beklemedeki İhbar</h5>
+                <p id="pendingReports" class="fs-3">0</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section class="container my-5 text-white">
+    <h2 class="section-title text-center mb-4">Gündemimiz</h2>
+</h2>
+
+  <div class="row text-white">
+    <!-- GÜNDEM KART 1 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/cocuk1.jpg" class="card-img-top img-fluid" alt="Haber görseli">
+        <div class="card-body">
+          <span class="badge bg-danger mb-2">Etkinlik</span>
+          <h5 class="card-title">Çocuklar İçin Tiyatro Sahnesi Kuruldu</h5>
+          <p class="card-text">
+            Şehrimizde çocukların hayal gücünü geliştirmek ve sanatı sevdirmek amacıyla ücretsiz çocuk tiyatrosu etkinliği düzenlendi.
+          </p>
+          <a href="gundem-detay.html?id=1" target="_blank" rel="noopener noreferrer"
+   class="btn btn-outline-primary btn-sm">
+  Devamını Oku
+</a>
+
+
+        </div>
+        <div class="card-footer text-muted">
+          16 Ocak 2026
+        </div>
+      </div>
+    </div>
+
+    <!-- GÜNDEM KART 2 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/park.jpg" class="card-img-top img-fluid" alt="Haber görseli">
+        <div class="card-body">
+          <span class="badge bg-success mb-2">Park</span>
+          <h5 class="card-title">Yeni Park Alanı Açılıyor</h5>
+          <p class="card-text">
+            Beşiktaş’ta çocuklar için yeni bir park alanı projesi başlatıldı.
+          </p>
+          <a href="gundem-detay.html?id=2" class="btn btn-outline-primary btn-sm">
+  Devamını Oku
+</a>
+
+        </div>
+        <div class="card-footer text-muted">
+          15 Ocak 2026
+        </div>
+      </div>
+    </div>
+    <!-- GÜNDEM KART 3 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/kirlilik.jpg" class="card-img-top img-fluid" alt="Haber görseli">
+        <div class="card-body">
+          <span class="badge bg-warning text-dark mb-2">Çevre</span>
+          <h5 class="card-title">Çevre Kirliliği Alarm Veriyor</h5>
+          <p class="card-text">
+            Sahil hattında artan atıklar çevre gönüllülerini harekete geçirdi.
+          </p>
+          <a href="gundem-detay.html?id=3" class="btn btn-outline-primary btn-sm">
+  Devamını Oku
+</a>
+
+        </div>
+        <div class="card-footer text-muted">
+          14 Ocak 2026
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+
+  <div class="row g-4">
+  </div>
+</section>
+
+
+
+
+
+<!-- Giriş / Kayıt Modal -->
+<div class="modal fade" id="authModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Giriş Yap / Kayıt Ol</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" id="authTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button">Giriş Yap</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button">Kayıt Ol</button>
+          </li>
+        </ul>
+        <div class="tab-content mt-3">
+          <!-- Login Tab -->
+          <div class="tab-pane fade show active" id="login">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">E-posta</label>
+                <input type="email" class="form-control" id="loginEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Şifre</label>
+                <input type="password" class="form-control" id="loginPassword" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+            </form>
+          </div>
+          <!-- Register Tab -->
+<div class="tab-pane fade" id="register">
+  <form id="registerForm">
+    <div class="mb-3">
+      <label for="registerFirstName" class="form-label">Ad</label>
+      <input type="text" class="form-control" id="registerFirstName" required>
+    </div>
+    <div class="mb-3">
+      <label for="registerLastName" class="form-label">Soyad</label>
+      <input type="text" class="form-control" id="registerLastName" required>
+    </div>
+    <div class="mb-3">
+      <label for="registerEmail" class="form-label">E-posta</label>
+      <input type="email" class="form-control" id="registerEmail" required>
+    </div>
+    <div class="mb-3">
+      <label for="registerPassword" class="form-label">Şifre</label>
+      <input type="password" class="form-control" id="registerPassword" required>
+    </div>
+    <button type="submit" class="btn btn-success w-100">Kayıt Ol</button>
+  </form>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Basit JS Örneği -->
+<script>
+    const API_URL = "https://sehir-sesi.koyeb.app";
+    // Örnek sayısal veriler
+    let totalReports = 125;
+    let solvedReports = 70;
+    let pendingReports = 15;
+
+    document.getElementById('totalReports').innerText = totalReports;
+    document.getElementById('solvedReports').innerText = solvedReports;
+    document.getElementById('pendingReports').innerText = pendingReports;
+
+    // -------------------
+    // Login form submit (backend)
+    document.getElementById('loginForm').addEventListener('submit', async function(e){
+        e.preventDefault();
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+
+        try {
+            const res = await fetch(`${API_URL}/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await res.json();
+            if(res.ok){
+                alert(`Giriş başarılı! Hoşgeldiniz ${data.user.name}`);
+                bootstrap.Modal.getInstance(document.getElementById('authModal')).hide();
+                this.reset();
+            } else {
+                alert(data.error);
+            }
+        } catch(err){
+            console.error(err);
+            alert("Giriş sırasında hata oluştu");
+        }
+    });
+
+    // -------------------
+    // Register form submit (backend)
+    document.getElementById('registerForm').addEventListener('submit', async function(e){
+        e.preventDefault();
+        const firstName = document.getElementById('registerFirstName').value;
+        const lastName = document.getElementById('registerLastName').value;
+        const email = document.getElementById('registerEmail').value;
+        const password = document.getElementById('registerPassword').value;
+
+        try {
+            const res = await fetch(`${API_URL}/register`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ firstName, lastName, email, password })
+            });
+            const data = await res.json();
+            if(res.ok){
+                alert("Kayıt başarılı! Giriş yapabilirsiniz.");
+                bootstrap.Modal.getInstance(document.getElementById('authModal')).hide();
+                this.reset();
+            } else {
+                alert(data.error);
+            }
+        } catch(err){
+            console.error(err);
+            alert("Kayıt sırasında hata oluştu");
+        }
+    });
+</script>
+<footer class="contact-footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- Kurumsal Bilgi -->
+      <div class="col-md-4 mb-4 text-white">
+        <h5>Şehrimizin Sesi</h5>
+        <p class="footer-desc">
+          Şehrimizin Sesi, şehir gündemini tarafsız, hızlı ve güvenilir
+          bir şekilde okuyucularına ulaştırmayı amaçlayan yerel bir
+          haber platformudur.
+        </p>
+      </div>
+
+
+
+      <!-- İletişim -->
+      <div class="col-md-4 mb-4 text-white">
+        <h5>İletişim</h5>
+        <p><i class="fa-solid fa-location-dot"></i> İstanbul, Türkiye</p>
+        <p><i class="fa-solid fa-envelope"></i> info@sehrimizinsesi.com</p>
+        <p><i class="fa-solid fa-phone"></i> 0 (212) 000 00 00</p>
+      </div>
+
+      <!-- Sosyal Medya -->
+      <div class="col-md-4 mb-4 text-white">
+        <h5>Bizi Takip Edin</h5>
+
+        <div class="social-list">
+          <div class="social-item">
+            <i class="fab fa-instagram instagram"></i>
+            <span>@sehrimizinsesi</span>
+          </div>
+
+          <div class="social-item">
+            <i class="fab fa-x-twitter twitter"></i>
+            <span>@sehrimizinsesi</span>
+          </div>
+
+          <div class="social-item">
+            <i class="fab fa-facebook-f facebook"></i>
+            <span>Şehrimizin Sesi</span>
+          </div>
+
+          <div class="social-item">
+            <i class="fab fa-youtube youtube"></i>
+            <span>Şehrimizin Sesi TV</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <!-- Bilgilendirme Linkleri -->
+    <div class="row footer-bottom-links">
+      <div class="col text-center text-white">
+        <span>Gizlilik Politikası</span>
+        <span>•</span>
+        <span>Kullanım Şartları</span>
+        <span>•</span>
+        <span>KVKK Aydınlatma Metni</span>
+        <span>•</span>
+        <span>Reklam & İş Birliği</span>
+      </div>
+    </div>
+
+    <div class="text-center footer-copy text-white">
+      © 2026 Şehrimizin Sesi | Tüm Hakları Saklıdır
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
