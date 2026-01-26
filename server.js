@@ -7,7 +7,7 @@ const path = require("path");
 const app = express();
 app.use(cors({ origin: "*" }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "db.sqlite")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // --------------------
 // Persistent SQLite
