@@ -2,10 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const sqlite3 = require("sqlite3").verbose();
 const bcrypt = require("bcrypt"); // npm install bcrypt
+const path = require("path");
 
 const app = express();
 app.use(cors({ origin: "*" }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
 // --------------------
 // Persistent SQLite
@@ -85,11 +87,7 @@ app.post("/login", (req, res) => {
     });
 });
 
-// --------------------
-// Root endpoint
-app.get("/", (req, res) => {
-  res.send("Şehir Sesi API çalışıyor 🎶");
-});
+
 
 // --------------------
 // Complaints - CRUD
@@ -160,6 +158,10 @@ app.delete("/complaints/:id", (req, res) => {
       }
     }
   );
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // --------------------
