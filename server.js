@@ -1,11 +1,40 @@
 const express = require("express");
 const cors = require("cors");
-const db = require("./db");
+const sqlite3 = require("sqlite3").verbose();
 const bcrypt = require("bcrypt"); // npm install bcrypt
 
 const app = express();
 app.use(cors({ origin: "*" }));
 app.use(express.json());
+
+// --------------------
+// Persistent SQLite
+const DB_PATH = "/persistent/db.sqlite"; // Koyeb Persistent Volume kullanımı
+const db = new sqlite3.Database(DB_PATH, (err) => {
+  if (err) console.error("DB bağlantı hatası:", err);
+  else console.log("DB bağlı:", DB_PATH);
+});
+
+// Kullanıcı tablosu
+db.run(`
+  CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    email TEXT UNIQUE,
+    password TEXT
+  )
+`);
+
+// Şikayet tablosu
+db.run(`
+  CREATE TABLE IF NOT EXISTS complaints (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    description TEXT,
+    location TEXT,
+    status TEXT DEFAULT 'pending'
+  )
+`);
 
 // --------------------
 // Kayıt Ol
@@ -133,11 +162,12 @@ app.delete("/complaints/:id", (req, res) => {
   );
 });
 
+// --------------------
 const PORT = process.env.PORT || 3000;
-
 app.listen(PORT, () => {
   console.log(`Server ${PORT} portunda çalışıyor 🚦`);
 });
+
 
 
 
