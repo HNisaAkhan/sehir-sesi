@@ -5,12 +5,8 @@ const bcrypt = require("bcrypt"); // npm install bcrypt
 const path = require("path");
 
 const app = express();
-app.use(cors({
-    origin: "*", 
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
-app.options("(.*)", cors());
+// --- 1. GÜVENLİK VE CORS AYARLARI ---
+app.use(cors()); // En sade ve çalışan hali
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -170,10 +166,13 @@ app.delete("/complaints/:id", (req, res) => {
   );
 });
 
-
-app.get("(.*)", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+app.use((req, res, next) => {
+    if (req.path.startsWith('/complaints') || req.path.startsWith('/register') || req.path.startsWith('/login')) {
+        return next();
+    }
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
 
 // --------------------
 const PORT = process.env.PORT || 3000;
