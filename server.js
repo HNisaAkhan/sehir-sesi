@@ -5,7 +5,12 @@ const bcrypt = require("bcrypt"); // npm install bcrypt
 const path = require("path");
 
 const app = express();
-app.use(cors({ origin: "*" }));
+app.use(cors({
+    origin: "*", 
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+app.options("*", cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
