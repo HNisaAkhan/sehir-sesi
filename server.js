@@ -10,7 +10,7 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
-app.options("*", cors());
+app.options("(.*)", cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -170,7 +170,8 @@ app.delete("/complaints/:id", (req, res) => {
   );
 });
 
-app.use((req, res) => {
+
+app.get("(.*)", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
