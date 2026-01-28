@@ -21,7 +21,8 @@ const complaints = [
 async function seed() {
   for (const complaint of complaints) {
     try {
-      const res = await axios.post("http://localhost:3000/complaints", complaint, {
+      // seedComplaints.js içindeki linki bu yap:
+      const res = await axios.post("https://urgent-abbye-nisaprojects-e8de76ae.koyeb.app/complaints", complaint, {
         headers: { "Content-Type": "application/json" }
       });
       console.log(`Eklendi: ${res.data.id} - ${complaint.title}`);
