@@ -41,12 +41,16 @@ db.run(`
 // --------------------
 // Kayıt Ol
 app.post("/register", async (req, res) => {
+    // Frontend'den gelen verileri alıyoruz
     const { firstName, lastName, email, password } = req.body;
-    if(!firstName || !lastName || !email || !password){
-        return res.status(400).json({ error: "Tüm alanlar doldurulmalı" });
+    
+    // Basit bir kontrol: Email ve şifre mutlaka olmalı
+    if(!email || !password){
+        return res.status(400).json({ error: "Email ve şifre zorunludur!" });
     }
 
-    const name = `${firstName} ${lastName}`;
+    // İsim ve soyismi birleştiriyoruz (Eğer gelmezlerse boş string kalır)
+    const name = `${firstName || ''} ${lastName || ''}`.trim() || 'Yeni Kullanıcı';
 
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -56,13 +60,14 @@ app.post("/register", async (req, res) => {
             [name, email, hashedPassword],
             function(err){
                 if(err){
-                    return res.status(400).json({ error: "E-posta zaten kayıtlı" });
+                    // Email zaten varsa bu hata döner
+                    return res.status(400).json({ error: "Bu e-posta adresiyle daha önce kayıt olunmuş." });
                 }
-                res.json({ id: this.lastID, message: "Kayıt başarılı" });
+                res.json({ id: this.lastID, message: "Kayıt başarıyla tamamlandı!" });
             }
         );
     } catch(err) {
-        res.status(500).json({ error: "Kayıt sırasında hata oluştu" });
+        res.status(500).json({ error: "Sunucu tarafında bir hata oluştu." });
     }
 });
 
