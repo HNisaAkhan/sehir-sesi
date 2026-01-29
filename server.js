@@ -6,7 +6,7 @@ const path = require("path");
 
 const app = express();
 // --- 1. GÜVENLİK VE CORS AYARLARI ---
-app.use(cors()); // En sade ve çalışan hali
+app.use(cors()); 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
